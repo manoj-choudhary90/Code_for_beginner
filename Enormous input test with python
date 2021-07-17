@@ -1,0 +1,14 @@
+""" Question
+The purpose of this problem is to verify whether the method you are using to read input data is sufficiently fast to handle problems branded with the enormous Input/Output warning.
+You are expected to be able to process at least 2.5MB of input data per second at runtime.
+"""
+Solution
+n, k = map(int, input().split())
+n, k = int(n), int(k)
+count = 0
+    
+for i in range(n):
+    value = int(input())
+    if value % k == 0:
+        count += 1
+print(count)
