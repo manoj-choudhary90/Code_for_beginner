@@ -1,0 +1,19 @@
+"""Question:
+Pooja would like to withdraw X $US from an ATM.
+The cash machine will only accept the transaction if X is a multiple of 5,
+and Pooja's account balance has enough cash to perform the withdrawal transaction
+(including bank charges).
+For each successful withdrawal the bank charges 0.50 $US.
+Calculate Pooja's account balance after an attempted transaction.
+"""
+# Solution
+
+amt, bal = input("Enter the amount you want to withdraw and your account balance : ").split()
+amt, bal = float(amt), float(bal)
+
+if amt % 5 == 0 and (amt + 0.5) <= bal:
+    bal -= (amt + 0.5)
+    print(f"You debited : {amt} and Your balance : {bal}")
+        
+else:
+    print(f"You balance : {bal}")
