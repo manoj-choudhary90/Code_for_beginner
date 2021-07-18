@@ -1,0 +1,32 @@
+""" Question : You are asked to calculate factorials of some small positive integers.
+
+Input : An integer t, 1<=t<=100, denoting the number of testcases, followed by t lines, each containing a single integer n, 1<=n<=100.
+
+Example:
+Sample input:
+4
+2
+5
+3
+Sample output:
+2
+120
+6
+"""
+# Code here:
+def factorial():
+    arr = []
+    
+    for i in range(int(input())):
+        fact, number = 1, int(input())
+        
+        while(number > 0):
+            fact *= number
+            number -= 1
+            
+        arr.append(fact)
+    
+    for i in arr:
+        print(i)
+        
+factorial()
