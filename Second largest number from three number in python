@@ -1,0 +1,49 @@
+""" Question : Three numbers A, B and C are the inputs. Write a program to find second largest among them.
+Input : The first line contains an integer T, the total number of testcases. Then T lines follow, each line contains three integers A, B and C.
+Output : For each test case, display the second largest among A, B and C, in a new line.
+
+Example:
+Sample Input:
+3 
+41 20 300
+21312 221 70
+31 4 777
+
+Sample Output:
+41
+221
+31
+"""
+
+# Code here :
+def second_largest():
+    
+    # List to add resulted second largest number
+    arr = []
+    
+    # Number of times you want to find second largest number
+    for i in range(int(input())):
+        
+        # List to store three number
+        list1 = []
+        
+        # Taking three number as input
+        a, b, c = map(int, input().split())
+        
+        # To add three number in list1
+        list1.extend([a, b, c])
+        
+        # To sort our list1
+        list1.sort()
+        
+        # After sorted taking last second number from list
+        s_largest = list1[-2]
+        
+        # Append result in array (arr)
+        arr.append(s_largest)
+        
+    # Printing resultes one by one
+    for i in arr:
+        print(i)
+    
+second_largest()
